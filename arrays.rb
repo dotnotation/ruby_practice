@@ -30,5 +30,8 @@ string.split("")
 string_two = "hi, hello, world"
 string_two.split(",")
 # join and split are non destructive
+shopping_list = ["grapes", "chicken", "chips", "apples", "chips"]
+shopping_list.uniq 
+
 
 binding.pry
