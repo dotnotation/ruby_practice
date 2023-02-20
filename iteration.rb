@@ -32,3 +32,11 @@ names.reject do |name|
 end
 # the above two methods would produce the same results
 
+numbers.sort
+
+numbers.sort { |n, n2| n2 <=> n }
+
+objs = [{name: "Momo"}, {name: "Chyna"}]
+objs.sort_by { |hash| hash.name }
+
+
