@@ -12,3 +12,6 @@ def countdown_with_sleep(seconds)
         seconds -= 1
     end
 end
+
+puts countdown(10)
+puts countdown_with_sleep(5)
