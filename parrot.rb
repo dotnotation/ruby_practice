@@ -1,6 +1,8 @@
 def parrot(phrase = "Squawk")
+    # default value ^
     puts phrase
     phrase
+    # implicit return ^
 end
 
 def two
