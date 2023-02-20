@@ -21,7 +21,14 @@ array_one.slice(2, 4)
 # array methods
 array.length
 array.size
-array.count 
-
+array.count
+array.include?(4)
+# will return a boolean 
+array.join(" ")
+string = "hello"
+string.split("")
+string_two = "hi, hello, world"
+string_two.split(",")
+# join and split are non destructive
 
 binding.pry
