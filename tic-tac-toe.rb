@@ -60,11 +60,11 @@ class TicTacToe
     end
 
     def won?
-        WIN_COMBINATIONS.each do |win_combo|
-            if board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] == board[win_combo[2]] && position_taken?(win_combo[0])
-                return win_combo
-            end
+        WIN_COMBINATIONS.detect do |win_combo|
+            board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] == board[win_combo[2]] && position_taken?(win_combo[0])
+            # detect already knows that what is inside is a conditional so you can remove if statement
+            # if condition is met it will return what is in the pipes
+            # if condition is no met it will return nil which is a falsey value
         end
-        return false
     end
 end
