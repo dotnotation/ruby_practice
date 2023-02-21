@@ -67,4 +67,34 @@ class TicTacToe
             # if condition is no met it will return nil which is a falsey value
         end
     end
+
+    def full?
+        turn_count == 9
+        # board.all? {|space| space != " "} also works
+    end
+
+    def draw?
+        !won? && full?
+    end
+
+    def over?
+        draw? || won?
+    end
+
+    def winner
+        if wining_combo = won?
+            board[wining_combo[0]]
+        end
+    end
+
+    def play 
+        until over? do 
+            turn
+        end
+        if won?
+            puts "Congratulations #{winner}!"
+        else draw?
+            puts "Cat's Game!"
+        end
+    end
 end
