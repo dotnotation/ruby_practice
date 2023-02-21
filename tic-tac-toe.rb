@@ -47,4 +47,19 @@ class TicTacToe
         (board - [" "]).length 
         # this involves no iteration and is the most cost effective
     end
+
+    def current_player
+        turn_count.odd? ? "O" : "X"
+    end
+
+    def turn 
+        user_input = gets.strip 
+        user_index = input_to_index(user_input)
+        valid_move?(user_index) ? move(user_index, current_player) : turn
+        display_board
+    end
+
+    def won?
+        
+    end
 end
